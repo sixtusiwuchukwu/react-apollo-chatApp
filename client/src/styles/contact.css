@@ -1,0 +1,59 @@
+.media-contact-container {
+  box-shadow: 2px 2px 12px 2px gray;
+  width: 50%;
+  height: 70vh;
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+  animation-name: fade;
+  animation-duration: 4s;
+}
+.holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.media-contact-container button {
+  margin-bottom: 40px;
+  width: 250px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 25px;
+  outline: none;
+}
+.media-contact-container button:hover {
+  opacity: 0.6;
+}
+.facebook {
+  background-color: rgba(13, 26, 97, 0.664);
+  color: white;
+}
+.twitter {
+  background-color: skyblue;
+  color: white;
+}
+.whatsapp {
+  background-color: rgba(2, 110, 2, 0.76);
+  color: white;
+}
+.gmail {
+  background-color: rgba(202, 24, 24, 0.918);
+  color: white;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
