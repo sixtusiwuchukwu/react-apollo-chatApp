@@ -63,10 +63,11 @@ const server = new ApolloServer({
   }),
   introspection: true,
   tracing: true,
+  playground: true,
 });
 // setting middleware
 
-server.applyMiddleware({ app });
+server.applyMiddleware({ app, path: "/" });
 
 const httpServer = http.createServer(app);
 server.installSubscriptionHandlers(httpServer);
