@@ -1,25 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NotFound from "./components/notfound";
+import Group from "./components/group";
+import JoinGroup from "./components/joinGroup";
+
+// import { WebSocketLink } from "apollo-link-ws";
+
+// const wsLink = new WebSocketLink({
+//   uri: `ws://localhost:2080/graphql`,
+//   options: {
+//     reconnect: true,
+//   },
+// });
+// const COMMENTS_SUBSCRIPTION = gql`
+//   subscription OnCommentAdded($postID: ID!) {
+//     commentAdded(postID: $postID) {
+//       id
+//       content
+//     }
+//   }
+// `;
+
+// function LatestComment({ postID }) {
+//   const { data: { commentAdded }, loading } = useSubscription(
+//     COMMENTS_SUBSCRIPTION,
+//     { variables: { postID } }
+//   );
+//   return <h4>New comment: {!loading && commentAdded.content}</h4>;
+// }
+
+// import {
+//   ApolloClient,
+//   InMemoryCache,
+//   gql,
+//   NormalizedCacheObject
+// } from '@apollo/client';
+
+// const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
+//   uri: 'http://localhost:4000/',
+//   cache: new InMemoryCache()
+// });
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route path="/" exact={true} component={JoinGroup} />
+          <Route path="/letschat" component={Group} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 

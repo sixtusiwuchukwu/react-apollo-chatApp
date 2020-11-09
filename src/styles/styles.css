@@ -1,0 +1,60 @@
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  animation-name: fadesin;
+  animation-duration: 2s;
+}
+
+.btn-joingroup {
+  width: 225px;
+  outline: none;
+  background-color: #6f6fa0;
+  height: 40px;
+  margin-top: 30px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 3px;
+  font-family: firacode;
+  cursor: pointer;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 400px;
+  width: 50%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px 4px rgba(163, 160, 160, 0.397);
+  animation-name: fadesin;
+  animation-duration: 3s;
+}
+
+.h2-join {
+  color: #6f6fa0;
+}
+
+@keyframes fadesin {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .btn-joingroup {
+    width: 100%;
+  }
+}
+
+/* @media <445 */
